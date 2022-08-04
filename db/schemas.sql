@@ -2,7 +2,16 @@ DROP TABLE IF EXISTS Countries;
 CREATE TABLE Countries (
   id SERIAL PRIMARY KEY,
   country VARCHAR (60),
-  continent VARCHAR (60)
+  country_code VARCHAR (60),
+  alpha3 VARCHAR (60),
+  country_num VARCHAR (60),
+  iso_something VARCHAR (60),
+  continent VARCHAR (60),
+  sub_region VARCHAR (60),
+  intermed_region VARCHAR (60),
+  region_code VARCHAR (60),
+  sub_region_code VARCHAR (60),
+  intermed_region_code VARCHAR (60)
 );
 
 DROP TABLE IF EXISTS Customers;
@@ -13,7 +22,6 @@ CREATE TABLE Customers (
   DOB DATE,
   city VARCHAR (60),
   country_id INT,
-  country_code VARCHAR (60),
   email VARCHAR (60) UNIQUE,
   FOREIGN KEY (country_id) REFERENCES Countries (id)
 );

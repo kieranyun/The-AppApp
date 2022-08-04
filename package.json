@@ -4,8 +4,9 @@
   "description": "an app for a job app",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "server-dev": "nodemon ./server/"
+    "test": "jest",
+    "server-dev": "nodemon --exec babel-node ./server/",
+    "dev:bundler": "webpack -w --mode=development"
   },
   "repository": {
     "type": "git",
