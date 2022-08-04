@@ -1,0 +1,19 @@
+{
+  "name": "mochiappapp",
+  "version": "1.0.0",
+  "description": "an app for a job app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kieranyun/MochiAppApp.git"
+  },
+  "author": "Kieran Yun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kieranyun/MochiAppApp/issues"
+  },
+  "homepage": "https://github.com/kieranyun/MochiAppApp#readme"
+}
