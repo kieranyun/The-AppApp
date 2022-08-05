@@ -67,7 +67,6 @@ exports.getAllCustomers = async (count, offset) => {
       LIMIT $1 OFFSET $2`;
     return db.query(query, [count, offset]);
   } catch (error) {
-    console.log(error);
     throw new Error('Error getting all customers', error);
   }
 };
@@ -83,7 +82,6 @@ exports.searchForCustomer = async (customerID) => {
     WHERE customers.id = $1`;
     return db.query(query, [customerID]);
   } catch (error) {
-    console.log(error);
     throw new Error('Error finding customer', error);
   }
 };
