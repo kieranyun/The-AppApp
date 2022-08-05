@@ -1,1 +1,1 @@
-\COPY countries (country, country_code, alpha3, country_num, iso_something, continent, sub_region, intermed_region, region_code, sub_region_code, intermed_region_code) FROM '/Users/kieranyun/Documents/jobSearch/MochiAppApp/db/countries.csv' DELIMITER ',' CSV HEADER;
+\COPY countries (country, country_code, alpha3, country_num, iso_something, continent, sub_region, intermed_region, region_code, sub_region_code, intermed_region_code) FROM '/home/ubuntu/MochiAppApp/db/countries.csv' DELIMITER ',' CSV HEADER;
