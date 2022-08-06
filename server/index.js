@@ -15,6 +15,10 @@ app.use('/', (req, res, next) => {
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('Hello! Good day! This is just a little landing page for the MochiAppApp, made by Kieran Yun');
+});
+
 app.post('/registration', async (req, res) => {
   try {
     await query.newCustomer(req.body);
