@@ -15,7 +15,7 @@ app.use('/', (req, res, next) => {
 app.use(express.json());
 app.use(cors());
 
-app.post('/customers', async (req, res) => {
+app.post('/registration', async (req, res) => {
   try {
     await query.newCustomer(req.body);
     res.status(201).send('success');
