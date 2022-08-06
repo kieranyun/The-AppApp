@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { faker } from '@faker-js/faker';
+const {faker} = require('@faker-js/faker');
 
 const db = require('./index');
 
@@ -11,7 +11,7 @@ function getRandomInt(min, max) {
 }
 
 async function addAMillyCustomers() {
-  for (let i = 1; i <= 1000000; i += 1) {
+  for (let i = 1043001; i <= 1123000; i += 1) {
     const randomName = faker.name.findName(); // Rowan Nikolaus
     const [firstName, lastName] = randomName.split(' ');
     const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.bi
@@ -24,8 +24,9 @@ async function addAMillyCustomers() {
       )
       VALUES (
         $1, $2, $3, $4, $5, $6, $7
-      )`;
-    db.query(query, [i, firstName, lastName, randomDOB, randomCity, randomCountry, randomEmail]);
+      )
+	ON CONFLICT (email) DO NOTHING  `;
+    await db.query(query, [i, firstName, lastName, randomDOB, randomCity, randomCountry, randomEmail]);
   }
 }
 
