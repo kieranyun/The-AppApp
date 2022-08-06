@@ -25,7 +25,7 @@ async function addAMillyCustomers() {
       VALUES (
         $1, $2, $3, $4, $5, $6, $7
       )`;
-    db.query(query, [i, firstName, lastName, randomDOB, randomCity, randomCountry, randomEmail]);
+    await db.query(query, [i, firstName, lastName, randomDOB, randomCity, randomCountry, randomEmail]);
   }
 }
 
