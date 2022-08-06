@@ -11,7 +11,7 @@ function getRandomInt(min, max) {
 }
 
 async function addAMillyOrders() {
-  for (let i = 1; i <= 2; i += 1) {
+  for (let i = 3; i <= 1000000; i += 1) {
     // const randomName = faker.name.findName(); // Rowan Nikolaus
     // const [firstName, lastName] = randomName.split(' ');
     // const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.bi
@@ -22,7 +22,7 @@ async function addAMillyOrders() {
         id, customer_id, order_date, item
       )
       VALUES (
-        $1, $2, CURRENT_TIMESTAMP, $3,
+        $1, $2, CURRENT_TIMESTAMP, $3
       )
       `;
     // eslint-disable-next-line no-await-in-loop
