@@ -60,6 +60,21 @@ app.get('/customers/:customerID', async (req, res) => {
   }
 });
 
+app.get('/orders/:orderID', async (req, res) => {
+  try {
+    const { orderID } = req.params;
+    let order = await query.searchForCustomer(orderID);
+    [order] = order.rows;
+    if (order) {
+      res.send(order);
+    } else {
+      res.status(404).send('no order found with given id');
+    }
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Kieran's app listening on port ${port}`);
