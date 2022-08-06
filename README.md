@@ -1,10 +1,11 @@
 # MochiAppApp
 An API to apply to a fly company called Mochi. 
+Built with Node.js, Express, Monitored by PM2, deployed on AWS.
 
 :bulb:  Made by Kieran Yun.
 
 ## How to access the API
-simply go to http://54.241.231.10/ and then tack on a subdirectory for more.
+simply open a terminal and try out the following cURL commands!
 
 #### There are 5 routes available 
 #### POST /registration 
@@ -41,3 +42,10 @@ curl -d '{"orderID": "9999999","firstName": "Kieran",
    
 ## The database
 It's got just north of 1 million randomly generated customers and 1 million orders!
+![Screen Shot 2022-08-06 at 12 12 38 AM](https://user-images.githubusercontent.com/18022276/183265784-6a905231-65ec-46cc-b21a-cf494031bbbe.png)
+
+## Testing
+The API is still very simple, it is missing validation and could use more elegant error handling! 
+![Screen Shot 2022-08-06 at 1 54 45 PM](https://user-images.githubusercontent.com/18022276/183265779-b450443d-0cf0-4d8f-a343-87ce99fc69e9.png)
+
+
