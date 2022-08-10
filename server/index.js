@@ -54,11 +54,10 @@ app.get('/customers/:customerID', async (req, res) => {
     const { customerID } = req.params;
     let customer = await query.searchForCustomer(customerID);
     [customer] = customer.rows;
-    console.log(customer);
     if (customer) {
       res.send(customer);
     } else {
-      res.status(404).send('no customers found with given id');
+      res.status(204).send('no customers found with given id');
     }
   } catch (error) {
     res.status(400).send(error);
