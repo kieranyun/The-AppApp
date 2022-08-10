@@ -33,6 +33,7 @@ app.post('/orders', async (req, res) => {
     await query.newOrder(req.body);
     res.status(201).send('order posted');
   } catch (error) {
+	  console.log(error);
     res.status(400).send(error);
   }
 });
@@ -57,9 +58,10 @@ app.get('/customers/:customerID', async (req, res) => {
     if (customer) {
       res.send(customer);
     } else {
-      res.status(404).send('no customers found with given id');
+      res.status(204).send('no customers found with given id');
     }
   } catch (error) {
+	  console.log(error);
     res.status(400).send(error);
   }
 });
@@ -72,13 +74,18 @@ app.get('/orders/:orderID', async (req, res) => {
     if (order) {
       res.send(order);
     } else {
+	    console.log('404 sent');
       res.status(404).send('no order found with given id');
     }
   } catch (error) {
+	  console.log(error);
     res.status(400).send(error);
   }
 });
 
+app.get('/loaderio-dbe65bd4eff7e7c37069896ea8fda827', (req, res) => {
+	res.send('loaderio-dbe65bd4eff7e7c37069896ea8fda827')
+});
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`Kieran's app listening on port ${port}`);

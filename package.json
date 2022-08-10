@@ -2,11 +2,12 @@
   "name": "mochiappapp",
   "version": "1.0.0",
   "description": "an app for a job app",
-  "main": "index.js",
+  "main": "./server/index.js",
   "scripts": {
     "test": "jest",
     "server-dev": "nodemon --exec babel-node ./server/",
-    "dev:bundler": "webpack -w --mode=development"
+    "dev:bundler": "webpack -w --mode=development",
+    "start": "node ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,12 +28,15 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "forever-monitor": "^3.0.3",
     "nodemon": "^2.0.19",
     "pg": "^8.7.3",
+    "pm2": "^5.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "dns": "file:./mock/dns"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",
