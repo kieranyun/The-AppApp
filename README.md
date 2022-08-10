@@ -13,7 +13,7 @@ simply open a terminal and try out the following cURL commands!
    
    ```
 curl -d '{"customerID": "9999999","firstName": "Kieran",
-"lastName": "Yun", "dob": "1993-09-04","city": "San Francisco", "country": "Nepal","countryCode": "NP","email": "fake.email1@gmail.com"}' -H 'Content-Type: application/json' http://54.241.231.10/registration
+"lastName": "Yun", "dob": "1993-09-04","city": "San Francisco", "country": "Nepal","countryCode": "NP","email": "fake.email1@gmail.com"}' -H 'Content-Type: application/json' http://54.177.197.187/registration
  ```
  
 #### POST /orders
@@ -21,23 +21,23 @@ curl -d '{"customerID": "9999999","firstName": "Kieran",
    
 ```
 curl -d '{"orderID": "9999999","firstName": "Kieran",
-"lastName": "Yun","email": "fake.email1@gmail.com","item": "Bespoke Applications"}' -H 'Content-Type: application/json' http://54.241.231.10/orders
+"lastName": "Yun","email": "fake.email1@gmail.com","item": "Bespoke Applications"}' -H 'Content-Type: application/json' http://54.177.197.187/orders
  ```
    
 #### GET /customers
    a get request to this endpoint will return a list of customers. It will return them a page at a time with optional query parameters page and count
    ```
-   curl -X GET http://54.241.231.10/customers?page=2&count=10
+   curl -X GET http://54.177.197.187/customers?page=2&count=10
    ```
 #### GET /customers/:customerID
    if you have a customer's ID you can search for their info with this endpoint, replace the last subdirectory with any int between 1 and 1,000,000 for a random customer!
    ```
-   curl -X GET http://54.241.231.10/customers/42358
+   curl -X GET http://54.177.197.187/customers/42358
    ```
 #### GET /orders/:orderID
    with an orderID, you can search for an order's info at this endpoint. 
    ```
-   curl -X GET http://54.241.231.10/orders/423458
+   curl -X GET http://54.177.197.187/orders/423458
    ```
    
 ## The database
