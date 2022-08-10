@@ -54,6 +54,7 @@ app.get('/customers/:customerID', async (req, res) => {
     const { customerID } = req.params;
     let customer = await query.searchForCustomer(customerID);
     [customer] = customer.rows;
+    console.log(customer);
     if (customer) {
       res.send(customer);
     } else {
