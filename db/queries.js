@@ -47,16 +47,6 @@ exports.newOrder = async ({ orderID, email, item }) => {
   }
 };
 
-exports.getCustomersDayOfBirth = async (customerID) => {
-  try {
-    let day = await db.query('SELECT EXTRACT (DAY FROM dob) FROM customers WHERE id = $1', [customerID]);
-    day = day.rows[0].extract;
-    return day;
-  } catch (error) {
-    throw new Error('error getting day of birth', error);
-  }
-};
-
 exports.getAllCustomers = async (count, offset) => {
   try {
     const query = `
