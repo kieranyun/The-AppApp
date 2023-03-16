@@ -1,5 +1,5 @@
-# MochiAppApp
-An API to apply to a fly company called Mochi. 
+# The AppApp
+An API to apply to a fly company. 
 Built with Node.js, Express, Monitored by PM2, deployed on AWS.
 
 :bulb:  Made by Kieran Yun.
